@@ -210,3 +210,6 @@ I've opened a PR's and it's open by 1 year now. So this version is in Typescript
 * Okta
 * Auth0
 
+## Wanna help?
+
+I just started developing with node few days ago. If there is any change to help with better code, tests. I'll be grateful.

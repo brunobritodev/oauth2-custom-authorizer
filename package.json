@@ -41,6 +41,6 @@
         "@types/node": "^13.11.0",
         "dotenv": "^8.2.0",
         "lodash": "^4.17.15",
-        "node-accesstoken-validation": "^1.0.3"
+        "node-accesstoken-validation": "^1.0.4"
     }
 }
