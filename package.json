@@ -3,6 +3,13 @@
     "version": "1.0.0",
     "description": "OAuth 2.0 Custom Authorizer for AWS API Gateway. It validate bearer tokens. Both JWT Token and Reference Token",
     "main": "index.js",
+    "repository": {
+        "url": "git+https://github.com/brunohbrito/oauth2-custom-authorizer.git",
+        "type": "git"
+    },
+    "bugs": {
+        "url": "https://github.com/brunohbrito/oauth2-custom-authorizer/issues"
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc",
