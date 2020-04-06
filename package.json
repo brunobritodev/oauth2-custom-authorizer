@@ -1,6 +1,8 @@
 {
     "name": "oauth2-custom-authorizer",
     "version": "1.0.0",
+    "author": "Bruno Brito",
+    "license": "MIT",
     "description": "OAuth 2.0 Custom Authorizer for AWS API Gateway. It validate bearer tokens. Both JWT Token and Reference Token",
     "main": "index.js",
     "repository": {
@@ -11,10 +13,10 @@
         "url": "https://github.com/brunohbrito/oauth2-custom-authorizer/issues"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "./node_modules/.bin/lambda-local --timeout 300 -l dist/index.js -h handler -e test/event.json",
         "build": "tsc",
-        "zip": "grunt lambda_package --account-id=1234567890",
-        "start": "node "
+        "zip": "mkdir publish && rm -f publish/lambda-oauth2-jwt-authorizer.zip ; zip build/lambda-oauth2-jwt-authorizer.zip -r dist/**/*.js *.json .env node_modules/",
+        "start": "./node_modules/.bin/lambda-local --timeout 300 -l index.js -h handler -e test/event.json"
     },
     "keywords": [
         "oauth2",
@@ -29,20 +31,16 @@
         "openid_connect",
         "identityserver4"
     ],
-    "author": "Bruno Brito",
-    "license": "MIT",
     "devDependencies": {
         "@types/aws-lambda": "^8.10.47",
         "@types/lodash": "^4.14.149",
-        "grunt": "^1.1.0",
-        "grunt-aws": "^0.7.1",
-        "grunt-aws-lambda": "^0.13.0",
+        "gulp": "^4.0.2",
+        "gulp-clean": "^0.4.0",
+        "gulp-install": "^1.1.0",
         "lambda-local": "^1.7.1",
-        "load-grunt-tasks": "^5.1.0",
-        "serverless": "^1.67.0",
-        "serverless-plugin-typescript": "^1.1.9",
         "tslint": "^6.1.1",
-        "typescript": "^3.8.3"
+        "typescript": "^3.8.3",
+        "zip-a-folder": "0.0.12"
     },
     "dependencies": {
         "@types/node": "^13.11.0",

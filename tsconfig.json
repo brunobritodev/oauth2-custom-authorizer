@@ -4,9 +4,18 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "target": "es6",
+    "lib": [
+      "es6"
+    ],
     "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "sourceMap": true,
+    "experimentalDecorators": true, // required
+    "emitDecoratorMetadata": true, // required
     "outDir": "./dist",
     "baseUrl": ".",
     "paths": {
